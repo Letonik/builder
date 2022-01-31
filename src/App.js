@@ -19,7 +19,7 @@ function App() {
           <Route path={'/setting'} element={<Setting/>}/>
           <Route path={'/editor'} element={<Countries/>}/>
           <Route path={'/editor/:lang'} element={<Templates/>}/>
-          <Route path={'/editor/:lang/:template'} element={<Editor/>}/>
+          <Route path={'/editor/:lang/:pageId'} element={<Editor/>}/>
         </Routes>
       </div>
     </div>

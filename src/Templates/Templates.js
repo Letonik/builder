@@ -1,16 +1,35 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router";
 import {Link} from "react-router-dom";
+import axios from "axios";
+import {API_HOST, create_page} from "../api";
 
 const Templates = () => {
   const params = useParams()
   const [pages, setPages] = useState([])
-  const [isValid, setIsValid] = useState([])
+  const [isValid, setIsValid] = useState(true)
   const [name, setName] = useState('')
-  const handleSubmit = () => {
+  const [error, setError] = useState('')
+  useEffect(() => {
+    const getAllPages = async () => {
+      try {
+        const response = await axios.get(`${API_HOST}/`)
+        setPages(response.data)
+      } catch (e) {
+        console.log(e)
+        setError(e.message)
+      }
+    }
+    getAllPages()
+  },[])
+  const handleSubmit = async () => {
     if (!name) {
       setIsValid(false)
+      return
     }
+    const newPage = await create_page(name)
+    setName('')
+    setPages([...pages, newPage])
   }
   const clearForm = () => {
     setIsValid(true)
@@ -21,9 +40,9 @@ const Templates = () => {
     <div className='container'>
       <div className='row'>
         <div className='col-12 mt-5'>
-          <form id='create-page' onSubmit='return validatForm(event)' noValidate>
+          <form id='create-page' >
             <div className='modal-header'>
-              <h5 className='modal-title' id='addPageModalLabel'>Create Page</h5>
+              <h5 className='modal-title'>Create Page</h5>
             </div>
             <div className='modal-body'>
               <div className='col-auto'>
@@ -65,6 +84,11 @@ const Templates = () => {
           </form>
         </div>
         <div className='col-12 my-2'>
+          {error && (
+            <div role='alert' className='alert alert-primary'>
+              {error}
+            </div>
+          )}
           <table className='table table-bordered table-hover'>
             <thead>
 
