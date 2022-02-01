@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router";
 import {Link} from "react-router-dom";
 import axios from "axios";
-import {API_HOST, create_page} from "../api";
+import {API_HOST, create_page} from "../api_utils";
 
 const Templates = () => {
   const params = useParams()

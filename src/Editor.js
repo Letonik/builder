@@ -1,29 +1,53 @@
-import React, {useEffect, useState} from 'react';
-import grapesjs from "grapesjs";
-import gjsPresentWebpage from "grapesjs-preset-webpage";
-import './styles/main.scss'
-import {useParams} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
+import { useSelector } from "react-redux";
+import { API_HOST } from "./api_utils";
+import Sidebar from "./components/Sidebar";
+import TopNav from "./components/TopNav";
+import geditorConfig from "./api_utils/geditor_config";
+import PageSection from "./components/PageSection";
 
 const Editor = () => {
+  const [editor, setEditor] = useState(null);
+  const [assets, setAssets] = useState([]);
+  const { pageId } = useParams();
 
-  const [editor, setEditor] = useState(null)
-  const {pageId} = useParams()
-  console.log(pageId + ' !!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+  const { pageStore } = useSelector((state) => state);
+  const { pages } = pageStore;
 
   useEffect(() => {
-    const editor = grapesjs.init({
-      container: '#editor',
-      plugins: [gjsPresentWebpage],
-      pluginsOpts: {
-        gjsPresentWebpage:{},
+    async function getAllAssets() {
+      try {
+        const response = await axios.get(`${API_HOST}assets/`);
+        setAssets(response.data);
+      } catch (error) {
+        setAssets(error.message);
       }
-    })
-    setEditor(editor)
-  },[])
+    }
 
+    getAllAssets();
+  }, []);
+
+  useEffect(() => {
+    const editor = geditorConfig(assets, pageId);
+    setEditor(editor);
+  }, [pageId, assets]);
   return (
-    <div>
-      <div id="editor"></div>
+    <div className="App">
+      <div id="navbar" className="sidenav d-flex flex-column overflow-scroll">
+        <nav className="navbar navbar-light">
+          <div className="container-fluid">
+            <span className="navbar-brand mb-0 h3 logo">Lichi Editor</span>
+          </div>
+        </nav>
+        <PageSection pages={pages} />
+        <Sidebar />
+      </div>
+      <div className="main-content" id="main-content">
+        <TopNav />
+        <div id="editor"></div>
+      </div>
     </div>
   );
 };
