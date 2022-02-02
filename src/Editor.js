@@ -34,19 +34,19 @@ const Editor = () => {
     setEditor(editor);
   }, [pageId, assets]);
   return (
-    <div className="App">
+    <div className="ed">
+      <div className="main-content" id="main-content">
+        <TopNav />
+        <div id="editor"></div>
+      </div>
       <div id="navbar" className="sidenav d-flex flex-column overflow-scroll">
         <nav className="navbar navbar-light">
           <div className="container-fluid">
             <span className="navbar-brand mb-0 h3 logo">Lichi Editor</span>
           </div>
         </nav>
-        <PageSection pages={pages} />
+        {/*<PageSection pages={pages} />*/}
         <Sidebar />
-      </div>
-      <div className="main-content" id="main-content">
-        <TopNav />
-        <div id="editor"></div>
       </div>
     </div>
   );

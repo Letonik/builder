@@ -33,6 +33,7 @@ const geditorConfig = (assets, pageId) => {
   const navbar = $("#navbar");
   const mainContent = $("#main-content");
   const panelTopBar = $("#main-content > .navbar-light");
+  const sd = $("#sd");
 
   const editor = grapesjs.init({
     container: "#editor",
@@ -73,21 +74,16 @@ const geditorConfig = (assets, pageId) => {
 
   editor.on("run:preview", () => {
     console.log("It will trigger when we click on preview icon");
-    // This will be used to hide border
     editor.stopCommand("sw-visibility");
-    // This will hide the sidebar view
-    navbar.removeClass("sidebar");
-    // This will make the main-content to be full width
     mainContent.removeClass("main-content");
-
-    // This will hide top panel where we have added the button
+    mainContent.addClass("wid100");
+    navbar.addClass("d-none");
     panelTopBar.addClass("d-none");
   });
   editor.on("stop:preview", () => {
-    // This event is reverse of the above event.
     console.log("It will trigger when we click on cancel preview icon");
     editor.runCommand("sw-visibility");
-    navbar.addClass("sidebar");
+    navbar.removeClass("d-none");
     mainContent.addClass("main-content");
     panelTopBar.removeClass("d-none");
   });
