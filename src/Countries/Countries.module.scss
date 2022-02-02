@@ -1,11 +1,44 @@
 .countries {
-  width: 600px;
-  margin: 20vh auto;
+  max-width: 500px;
+  margin: 15vh auto;
   text-align: center;
+  box-shadow: 0px 0px 51px 2px rgba(34, 60, 80, 0.2);
+  border-radius: 10px;
+  padding: 20px 0;
+  box-sizing: border-box;
+  background: rgb(248, 248, 248);
+  h2 {
+    background: #2c2d31;
+    color: white;
+    margin-bottom: 30px;
+    padding: 20px 0;
+
+  }
   .btn {
     margin: 10px 0;
-    button {
-      width: 100%;
+    a {
+      text-decoration: none;
+      color: black;
+      .country {
+        font-size: 18px;
+        text-align: left;
+        padding: 10px 30px;
+        /*border-bottom: 1px solid #d4d4d4;*/
+        img {
+          margin: 0 20px 0 0;
+        }
+        .check {
+          width: 40px;
+          float: right;
+          display: none;
+        }
+        &:hover {
+          background: rgba(173, 203, 255, 0.2);
+          .check {
+            display: block;
+          }
+        }
+      }
     }
   }
 }

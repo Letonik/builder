@@ -9,6 +9,7 @@ import Countries from "./Countries/Countries";
 import Setting from "./Setting/Setting";
 import Home from "./Home/Home";
 import Sidebar from "./components/MainSideBar/SideBar";
+import Test from "./Test";
 
 function App() {
   const dispatch = useDispatch();
@@ -26,6 +27,7 @@ function App() {
           <Route path={'/editor'} element={<Countries/>}/>
           <Route path={'/editor/:lang'} element={<Templates/>}/>
           <Route path={'/editor/:lang/:pageId'} element={<Editor/>}/>
+          <Route path={'/test/:pageId'} element={<Test/>}/>
 
         </Routes>
       </div>
