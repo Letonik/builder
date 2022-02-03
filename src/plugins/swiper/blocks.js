@@ -1,10 +1,6 @@
 export default (editor, opts = {}) => {
   const bm = editor.BlockManager;
   const style = `<style>
-  .swiper-container {
-    width: 600px;
-    height: 300px;
-  }
   .swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -27,8 +23,6 @@ export default (editor, opts = {}) => {
 
   .swiper-slide img {
     display: block;
-    width: 100%;
-    height: 100%;
     object-fit: cover;
   }
   </style>
