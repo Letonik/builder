@@ -1,4 +1,9 @@
 @import "~bootstrap/scss/bootstrap";
+$lightGray: #cbcbcb;
+$lightBlack: #2c2d31;
+$gray: #35353b;
+$primary: #0d6efd;
+
 
 body {
   margin: 0;
@@ -6,8 +11,8 @@ body {
 }
 
 html {
-  overflow: scroll;
-  overflow-x: hidden;
+/*  overflow: scroll;*/
+  overflow: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -25,9 +30,17 @@ html {
  /* position: relative;*/
   width: 15%;
   height: 100vh;
+  &::-webkit-scrollbar {
+    width: 3px;
+    background-color: #5a5a5a;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #343434;
+    border-radius: 9em;
+  }
   overflow: scroll;
-  overflow-x: hidden;
-  background-color: rgba(255, 255, 255, 0.95);
+  overflow-x: hidden !important;
+  background-color: $lightBlack;
   transition: 0.5s;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(0, 0, 0, 0.3);
@@ -47,7 +60,7 @@ html {
 }
 .wid100 {
   width: 100%;
-  height: 100vh !important;
+  /*height: 130vh !important;*/
 }
 
 .main-content {
@@ -57,20 +70,44 @@ html {
 
   .navbar {
     padding: 0;
-
+    background: $lightBlack;
     .container-fluid {
       padding: 0;
     }
   }
 
   #editor {
-    border: 2px solid rgba(0, 0, 0, 0.3);
+    border: 2px solid gray;
     height: 96vh !important;
   }
 }
-
+.logo-container {
+  min-height: 100px;
+  display: flex;
+  background: $lightBlack;
+  .logo {
+    width: 60%;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.27);
+    padding: 0 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px 2px rgba(13, 110, 253, 0.70);
+    img {
+      width: 100%;
+    }
+  }
+}
 .nav {
   justify-content: space-between;
+  border: none !important;
+  margin-bottom: 10px;
+  .nav-item {
+    .active {
+      border-color:  $primary!important;
+      background: $primary;
+      color: white;
+    }
+  }
 }
 
 .gjs-pn-panel {
@@ -96,6 +133,7 @@ html {
     .gjs-blocks-c {
       align-items: center;
       justify-content: center;
+      background: $gray;
     }
 
     .gjs-block {
@@ -106,26 +144,35 @@ html {
 
 /* Theming */
 .gjs-one-bg {
-  background-color: #fcf6f5ff;
+  background-color: $lightBlack;
 }
 
 .gjs-two-color {
-  color: #990011ff;
+  color: $lightGray;
 }
 
 .gjs-three-bg {
-  background-color: #990011ff;
+  background-color: $primary;
   color: #fcf6f5ff;
 }
 
 .gjs-four-color,
 .gjs-four-color-h:hover {
-  color: #990011ff;
+  color: $primary;
 }
 
 .gjs-pn-btn {
-  border: 1px solid #003399;
+  border: none;
+  &:hover {
+    color: $primary;
+  }
 }
+.gjs-pn-buttons {
+  .gjs-pn-active {
+
+  }
+}
+
 
 // Customize Bootstrap CSS
 
@@ -137,9 +184,9 @@ html {
 }
 
 .text-decoration-none {
-  color: gray;
+  color: $primary;
   &:hover {
-    color: #990011ff;
+    color: $primary;
   }
 }
 
@@ -156,9 +203,11 @@ html {
 }*/
 
 .nav-link {
-  color: #990011ff;
+  color: $lightGray;
+  border-radius: 5px !important;
   &:hover {
-    color:  #990011ff;
+    color:  $primary;
+    border-color:  $primary!important;
   }
 }
 

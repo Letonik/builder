@@ -6,7 +6,7 @@ import { API_HOST } from "./api_utils";
 import Sidebar from "./components/Sidebar";
 import TopNav from "./components/TopNav";
 import geditorConfig from "./api_utils/geditor_config";
-import PageSection from "./components/PageSection";
+import logo from './assets/white-logo.png'
 
 const Editor = () => {
   const [editor, setEditor] = useState(null);
@@ -40,11 +40,9 @@ const Editor = () => {
         <div id="editor"></div>
       </div>
       <div id="navbar" className="sidenav d-flex flex-column overflow-scroll">
-        <nav className="navbar navbar-light">
-          <div className="container-fluid">
-            <span className="navbar-brand mb-0 h3 logo">Lichi Editor</span>
-          </div>
-        </nav>
+        <div className="logo-container">
+            <div className="logo"><img src={logo} alt=""/></div>
+        </div>
         {/*<PageSection pages={pages} />*/}
         <Sidebar />
       </div>
