@@ -84,7 +84,8 @@ const geditorConfig = (assets, pageId) => {
     console.log("It will trigger when we click on cancel preview icon");
     editor.runCommand("sw-visibility");
     navbar.removeClass("d-none");
-    mainContent.addClass("main-content");
+    mainContent.addClass("main-content")
+    mainContent.removeClass("wid100");
     panelTopBar.removeClass("d-none");
   });
 

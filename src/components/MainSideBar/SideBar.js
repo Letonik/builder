@@ -36,19 +36,19 @@ const SideNav = () => {
             <Menu iconShape="square">
               <MenuItem
                 icon={<i className="fa fa-home"></i>}
-                active={location.pathname == '/'}
+                active={location.pathname === '/'}
               >
                 <Link to="/">Home</Link>
               </MenuItem>
               <MenuItem
                 icon={<i className="fa fa-cog"></i>}
-                active={location.pathname == '/setting'}
+                active={location.pathname === '/setting'}
               >
                 <Link to="/setting">Setting</Link>
               </MenuItem>
                <MenuItem
                  icon={<i className="fa fa-edit"></i>}
-                 active={location.pathname == '/editor'}
+                 active={location.pathname.slice(0, 7) === '/editor'}
                >
                  <Link to="/editor">Editor</Link>
                </MenuItem>

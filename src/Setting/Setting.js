@@ -1,11 +1,11 @@
 import React from 'react';
 import style from './Setting.module.scss'
-import {Card, Button} from "react-bootstrap";
+import settingIcon from "../assets/settingIcon1.png";
 
 const Setting = () => {
   return (
     <div className={style.setting}>
-      Setting!
+      <img src={settingIcon} alt="settingIcon"/>
     </div>
   );
 };
