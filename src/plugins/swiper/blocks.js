@@ -1,3 +1,4 @@
+/*
 export default (editor, opts = {}) => {
   const bm = editor.BlockManager;
   const style = `<style>
@@ -5,8 +6,8 @@ export default (editor, opts = {}) => {
     text-align: center;
     font-size: 18px;
     background: #fff;
-
-    /* Center slide text vertically */
+width: 100%;
+    /!* Center slide text vertically *!/
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -23,7 +24,9 @@ export default (editor, opts = {}) => {
 
   .swiper-slide img {
     display: block;
-    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  
   }
   </style>
   `;
@@ -46,8 +49,8 @@ export default (editor, opts = {}) => {
     
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
     
   </div> ${style}`,
   });
 };
+*/

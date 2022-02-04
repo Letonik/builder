@@ -1,9 +1,9 @@
 import grapesjs from "grapesjs";
 import gjsBlockBasic from "grapesjs-blocks-basic";
 import $ from "jquery";
-import grapesjsBlockBootstrap from "grapesjs-blocks-bootstrap4";
 import grapesjsPluginExport from "grapesjs-plugin-export";
 import grapesjsStyleBg from "grapesjs-style-bg";
+import grapesjsLorySlider from "grapesjs-lory-slider";
 
 import {
   addEditorCommand,
@@ -18,7 +18,6 @@ import {
   traitManager,
 } from "./geditor_utils";
 import tailwindComponent from "../plugins/tailwind";
-import swiperComponent from "../plugins/swiper";
 
 const geditorConfig = (assets, pageId) => {
   $(".panel__devices").html("");
@@ -46,7 +45,7 @@ const geditorConfig = (assets, pageId) => {
     selectorManager: selectorManager,
     panels: panels,
     deviceManager: deviceManager,
-    assetManager: { assets: assets, upload: false },
+    assetManager: { assets: assets},
     storageManager: storageSetting(pageId),
     canvas: {
       styles: styles,
@@ -55,16 +54,16 @@ const geditorConfig = (assets, pageId) => {
     plugins: [
       tailwindComponent,
       gjsBlockBasic,
-      swiperComponent,
       grapesjsPluginExport,
       grapesjsStyleBg,
+      grapesjsLorySlider
     ],
     pluginsOpts: {
       tailwindComponent: {},
       gjsBlockBasic: {},
-      swiperComponent: {},
       grapesjsPluginExport: {},
       grapesjsStyleBg: {},
+      grapesjsLorySlider: {}
     },
   });
 

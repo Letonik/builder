@@ -1,6 +1,8 @@
 /* eslint-disable no-undef */
 /* eslint-disable import/no-anonymous-default-export */
 
+/*
+
 export default (editor, opts = {}) => {
   const dc = editor.DomComponents;
   const defaultType = dc.getType("default");
@@ -82,3 +84,4 @@ export default (editor, opts = {}) => {
     }),
   });
 };
+*/
