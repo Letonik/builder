@@ -3,7 +3,6 @@ import gjsBlockBasic from "grapesjs-blocks-basic";
 import $ from "jquery";
 import grapesjsPluginExport from "grapesjs-plugin-export";
 import grapesjsStyleBg from "grapesjs-style-bg";
-import grapesjsLorySlider from "grapesjs-lory-slider";
 import grapesjsComponentCountdown from 'grapesjs-component-countdown'
 import grapesjsSwiperSlider from 'grapesjs-swiper-slider'
 
@@ -33,8 +32,10 @@ const geditorConfig = (assets, pageId) => {
   // Content for Preview
   const navbar = $("#navbar");
   const mainContent = $("#main-content");
+  const editorId = $("#editor")
   const panelTopBar = $("#main-content > .navbar-light");
   const sd = $("#sd");
+  editorId.addClass("h96");
 
   const editor = grapesjs.init({
     container: "#editor",
@@ -58,7 +59,6 @@ const geditorConfig = (assets, pageId) => {
       gjsBlockBasic,
       grapesjsPluginExport,
       grapesjsStyleBg,
-/*      grapesjsLorySlider,*/
       grapesjsComponentCountdown,
       grapesjsSwiperSlider
     ],
@@ -67,7 +67,6 @@ const geditorConfig = (assets, pageId) => {
       gjsBlockBasic: {},
       grapesjsPluginExport: {},
       grapesjsStyleBg: {},
-/*      grapesjsLorySlider: {},*/
       grapesjsComponentCountdown:{},
       grapesjsSwiperSlider: {}
     },
@@ -82,6 +81,8 @@ const geditorConfig = (assets, pageId) => {
     mainContent.addClass("wid100");
     navbar.addClass("d-none");
     panelTopBar.addClass("d-none");
+    editorId.addClass("h100");
+    editorId.removeClass("h96");
   });
   editor.on("stop:preview", () => {
     console.log("It will trigger when we click on cancel preview icon");
@@ -90,6 +91,8 @@ const geditorConfig = (assets, pageId) => {
     mainContent.addClass("main-content")
     mainContent.removeClass("wid100");
     panelTopBar.removeClass("d-none");
+    editorId.addClass("h96");
+    editorId.removeClass("h100");
   });
 
   setTimeout(() => {

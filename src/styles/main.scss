@@ -56,9 +56,6 @@ html {
     overflow-x: hidden;
   }
 }
-.wid100 {
-  width: 100%;
-}
 
 .gjs-lory-frame {
   width: 200px !important;
@@ -78,9 +75,25 @@ html {
 
   #editor {
     border: 2px solid gray;
-    height: 96vh !important;
+    /*height: 96vh !important;*/
   }
 }
+
+
+////// For Full Screen //////
+.h100 {
+  height: 100vh !important;
+}
+.h96 {
+  height: 96vh !important;
+}
+.wid100 {
+  width: 100%;
+}
+/////////////////////////////
+
+
+
 .logo-container {
   min-height: 100px;
   display: flex;
