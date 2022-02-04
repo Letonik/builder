@@ -4,6 +4,8 @@ import $ from "jquery";
 import grapesjsPluginExport from "grapesjs-plugin-export";
 import grapesjsStyleBg from "grapesjs-style-bg";
 import grapesjsLorySlider from "grapesjs-lory-slider";
+import grapesjsComponentCountdown from 'grapesjs-component-countdown'
+import grapesjsSwiperSlider from 'grapesjs-swiper-slider'
 
 import {
   addEditorCommand,
@@ -56,14 +58,18 @@ const geditorConfig = (assets, pageId) => {
       gjsBlockBasic,
       grapesjsPluginExport,
       grapesjsStyleBg,
-      grapesjsLorySlider
+/*      grapesjsLorySlider,*/
+      grapesjsComponentCountdown,
+      grapesjsSwiperSlider
     ],
     pluginsOpts: {
       tailwindComponent: {},
       gjsBlockBasic: {},
       grapesjsPluginExport: {},
       grapesjsStyleBg: {},
-      grapesjsLorySlider: {}
+/*      grapesjsLorySlider: {},*/
+      grapesjsComponentCountdown:{},
+      grapesjsSwiperSlider: {}
     },
   });
 
