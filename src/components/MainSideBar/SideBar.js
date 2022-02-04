@@ -30,6 +30,9 @@ const SideNav = () => {
           <SidebarHeader>
             <div onClick={setCollapsed} className='closemenu'>
               <i className="fa fa-bars"></i>
+            {/*  <div>
+
+              </div>*/}
             </div>
           </SidebarHeader>
           <SidebarContent>
