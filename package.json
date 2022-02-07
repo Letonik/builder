@@ -13,6 +13,7 @@
     "grapesjs-blocks-basic": "^0.1.8",
     "grapesjs-blocks-bootstrap4": "^0.2.3",
     "grapesjs-component-countdown": "^0.1.3",
+    "grapesjs-mjml": "^0.5.8",
     "grapesjs-plugin-export": "^1.0.7",
     "grapesjs-react": "^4.0.1-alpha",
     "grapesjs-style-bg": "^1.0.5",

@@ -85,7 +85,15 @@ export const styleManager = {
         "text-shadow",
       ],
       properties: [
-        { name: "Font", property: "font-family" },
+        {
+          name: "Font",
+          property: "font-family",
+          defaults:"Bodoni Cyrillic",
+          list: [
+      /*      { name: "Bodoni Cyrillic", value: 'Bodoni Cyrillic' },*/
+            { name: "Quintessential", value: '"Quintessential", cursive' },
+          ]
+        },
         { name: "Weight", property: "font-weight" },
         { name: "Font color", property: "color" },
         {
@@ -576,5 +584,14 @@ export const scripts = [
 export const styles = [
   "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css",
   "https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css",
-  "https://unpkg.com/grapesjs/dist/css/grapes.min.css"
+  "https://unpkg.com/grapesjs/dist/css/grapes.min.css",
+  'https://fonts.googleapis.com/css?family=Archivo+Narrow:400,400i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&subset=latin,latin-ext'
 ];
+
+
+
+/*
+
+
+'https://allfont.ru/allfont.css?fonts=bodoni-cyrillic',
+  "https://fonts.googleapis.com/css2?family=Quintessential&display=swap"*/

@@ -5,6 +5,7 @@ import grapesjsPluginExport from "grapesjs-plugin-export";
 import grapesjsStyleBg from "grapesjs-style-bg";
 import grapesjsComponentCountdown from 'grapesjs-component-countdown'
 import grapesjsSwiperSlider from 'grapesjs-swiper-slider'
+import grapesJSMJML from 'grapesjs-mjml'
 
 import {
   addEditorCommand,
@@ -66,6 +67,7 @@ const geditorConfig = (assets, pageId) => {
       grapesjsSwiperSlider,
       blackButton,
       whiteButton,
+/*      grapesJSMJML,*/
       /*animateButton*/
     ],
     pluginsOpts: {
@@ -77,12 +79,30 @@ const geditorConfig = (assets, pageId) => {
       grapesjsSwiperSlider: {},
       blackButton: {},
       whiteButton: {},
+      /*grapesJSMJML: {
+        fonts: {
+          Montserrat: 'https://fonts.googleapis.com/css?family=Montserrat',
+          'Open Sans': 'https://fonts.googleapis.com/css?family=Open+Sans'
+        }
+      }*/
 /*      animateButton: {}*/
     },
   });
+/*  editor.on('load', () => {
+    let styleManager = editor.StyleManager;
+    let fontProperty = styleManager.getProperty('typography', 'font-family');
 
-  addEditorCommand(editor);
+    let list = [];
+    // empty list
+    fontProperty.set('list', list);
 
+    // custom list
+    list.push(fontProperty.addOption({value: 'Montserrat, sans-serif', name: 'Montserrat'}));
+    list.push(fontProperty.addOption({value: 'Open Sans, sans-serif', name: 'Open Sans'}));
+    fontProperty.set('list', list);
+
+    styleManager.render();
+  });*/
   editor.on("run:preview", () => {
     console.log("It will trigger when we click on preview icon");
     editor.stopCommand("sw-visibility");
