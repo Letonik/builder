@@ -19,6 +19,9 @@ import {
   traitManager,
 } from "./geditor_utils";
 import tailwindComponent from "../plugins/tailwind";
+import blackButton from "../plugins/buttons/black";
+import whiteButton from "../plugins/buttons/white";
+import animateButton from "../plugins/buttons/animate";
 
 const geditorConfig = (assets, pageId) => {
   $(".panel__devices").html("");
@@ -60,7 +63,10 @@ const geditorConfig = (assets, pageId) => {
       grapesjsPluginExport,
       grapesjsStyleBg,
       grapesjsComponentCountdown,
-      grapesjsSwiperSlider
+      grapesjsSwiperSlider,
+      blackButton,
+      whiteButton,
+      /*animateButton*/
     ],
     pluginsOpts: {
       tailwindComponent: {},
@@ -68,7 +74,10 @@ const geditorConfig = (assets, pageId) => {
       grapesjsPluginExport: {},
       grapesjsStyleBg: {},
       grapesjsComponentCountdown:{},
-      grapesjsSwiperSlider: {}
+      grapesjsSwiperSlider: {},
+      blackButton: {},
+      whiteButton: {},
+/*      animateButton: {}*/
     },
   });
 
