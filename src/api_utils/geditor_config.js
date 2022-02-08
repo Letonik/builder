@@ -1,12 +1,9 @@
 import grapesjs from "grapesjs";
-import gjsBlockBasic from "grapesjs-blocks-basic";
 import $ from "jquery";
 import grapesjsPluginExport from "grapesjs-plugin-export";
 import grapesjsStyleBg from "grapesjs-style-bg";
 import grapesjsComponentCountdown from 'grapesjs-component-countdown'
 import grapesjsSwiperSlider from 'grapesjs-swiper-slider'
-import grapesJSMJML from 'grapesjs-mjml'
-
 import {
   addEditorCommand,
   deviceManager,
@@ -21,6 +18,7 @@ import {
 } from "./geditor_utils";
 import tailwindComponent from "../plugins/tailwind";
 import blackButton from "../plugins/buttons/black";
+import gjsBlockBasic from "../plugins/mainBlock";
 import whiteButton from "../plugins/buttons/white";
 import animateButton from "../plugins/buttons/animate";
 
@@ -67,7 +65,6 @@ const geditorConfig = (assets, pageId) => {
       grapesjsSwiperSlider,
       blackButton,
       whiteButton,
-/*      grapesJSMJML,*/
       /*animateButton*/
     ],
     pluginsOpts: {
@@ -79,30 +76,12 @@ const geditorConfig = (assets, pageId) => {
       grapesjsSwiperSlider: {},
       blackButton: {},
       whiteButton: {},
-      /*grapesJSMJML: {
-        fonts: {
-          Montserrat: 'https://fonts.googleapis.com/css?family=Montserrat',
-          'Open Sans': 'https://fonts.googleapis.com/css?family=Open+Sans'
-        }
-      }*/
 /*      animateButton: {}*/
     },
   });
-/*  editor.on('load', () => {
-    let styleManager = editor.StyleManager;
-    let fontProperty = styleManager.getProperty('typography', 'font-family');
 
-    let list = [];
-    // empty list
-    fontProperty.set('list', list);
+  addEditorCommand(editor);
 
-    // custom list
-    list.push(fontProperty.addOption({value: 'Montserrat, sans-serif', name: 'Montserrat'}));
-    list.push(fontProperty.addOption({value: 'Open Sans, sans-serif', name: 'Open Sans'}));
-    fontProperty.set('list', list);
-
-    styleManager.render();
-  });*/
   editor.on("run:preview", () => {
     console.log("It will trigger when we click on preview icon");
     editor.stopCommand("sw-visibility");
@@ -124,6 +103,14 @@ const geditorConfig = (assets, pageId) => {
     editorId.removeClass("h100");
   });
 
+  const prop = editor.StyleManager.getProperty('typography', 'font-family');
+  prop.set('options', [
+    { value: 'Roboto, Arial, sans-serif', name: 'Roboto' },
+    { value: 'Bodoni Cyrillic', name: 'Bodoni Cyrillic' },
+    { value: 'Montserrat', name: 'Montserrat' },
+    { value: 'Futura PT', name: 'Futura PT' },
+    { value: 'Pirata One', name: 'Pirata One' },
+  ]);
   setTimeout(() => {
     let categories = editor.BlockManager.getCategories();
     categories.each((category) => category.set("open", false));

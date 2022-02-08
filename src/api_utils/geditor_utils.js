@@ -40,6 +40,7 @@ export const styleManager = {
         "min-height",
         "margin",
         "padding",
+        "background-color"
       ],
       properties: [
         {
@@ -85,15 +86,7 @@ export const styleManager = {
         "text-shadow",
       ],
       properties: [
-        {
-          name: "Font",
-          property: "font-family",
-          defaults:"Bodoni Cyrillic",
-          list: [
-      /*      { name: "Bodoni Cyrillic", value: 'Bodoni Cyrillic' },*/
-            { name: "Quintessential", value: '"Quintessential", cursive' },
-          ]
-        },
+        { name: "Font", property: "font-family", defaults: "Futura PT", },
         { name: "Weight", property: "font-weight" },
         { name: "Font color", property: "color" },
         {
@@ -236,6 +229,35 @@ export const styleManager = {
           type: "integer",
         },
         {
+          name: "Wrap",
+          property: "flex-wrap",
+          type: "radio",
+          defaults: "row",
+          list: [
+            {
+              value: "wrap",
+              name: "Wrap",
+              title: "wrap",
+            },
+            {
+              value: "wrap-reverse",
+              name: "Wrap Reverse",
+              title: "wrap-reverse",
+            },
+            {
+              value: "nowrap",
+              name: "No Wrap",
+              title: "nowrap",
+            },
+          ],
+        },
+        {
+          name: "Gap",
+          property: "gap",
+          type: "integer",
+          units: ["px", "%", ""]
+        },
+        {
           name: "Direction",
           property: "flex-direction",
           type: "radio",
@@ -244,26 +266,22 @@ export const styleManager = {
             {
               value: "row",
               name: "Row",
-              className: "icons-flex icon-dir-row",
               title: "Row",
             },
             {
               value: "row-reverse",
-              name: "Row reverse",
-              className: "icons-flex icon-dir-row-rev",
+              name: "Row rev",
               title: "Row reverse",
             },
             {
               value: "column",
               name: "Column",
               title: "Column",
-              className: "icons-flex icon-dir-col",
             },
             {
               value: "column-reverse",
-              name: "Column reverse",
+              name: "Column rev",
               title: "Column reverse",
-              className: "icons-flex icon-dir-col-rev",
             },
           ],
         },
@@ -275,28 +293,28 @@ export const styleManager = {
           list: [
             {
               value: "flex-start",
-              className: "icons-flex icon-just-start",
+              name: "start",
               title: "Start",
             },
             {
               value: "flex-end",
+              name: "start",
               title: "End",
-              className: "icons-flex icon-just-end",
             },
             {
               value: "space-between",
+              name: "between",
               title: "Space between",
-              className: "icons-flex icon-just-sp-bet",
             },
             {
               value: "space-around",
+              name: "around",
               title: "Space around",
-              className: "icons-flex icon-just-sp-ar",
             },
             {
               value: "center",
+              name: "center",
               title: "Center",
-              className: "icons-flex icon-just-sp-cent",
             },
           ],
         },
@@ -309,22 +327,20 @@ export const styleManager = {
             {
               value: "flex-start",
               title: "Start",
-              className: "icons-flex icon-al-start",
+              name: "start",
             },
             {
               value: "flex-end",
               title: "End",
-              className: "icons-flex icon-al-end",
+              name: "end",
             },
             {
               value: "stretch",
               title: "Stretch",
-              className: "icons-flex icon-al-str",
             },
             {
               value: "center",
               title: "Center",
-              className: "icons-flex icon-al-center",
             },
           ],
         },
@@ -382,22 +398,18 @@ export const styleManager = {
             {
               value: "flex-start",
               title: "Start",
-              className: "icons-flex icon-al-start",
             },
             {
               value: "flex-end",
               title: "End",
-              className: "icons-flex icon-al-end",
             },
             {
               value: "stretch",
               title: "Stretch",
-              className: "icons-flex icon-al-str",
             },
             {
               value: "center",
               title: "Center",
-              className: "icons-flex icon-al-center",
             },
           ],
         },
@@ -578,20 +590,13 @@ export const scripts = [
   "https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js",
   "https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js",
   "https://unpkg.com/grapesjs",
-  "dist/grapesjs-lory-slider.min.js",
   'https://cdnjs.cloudflare.com/ajax/libs/lory.js/2.3.4/lory.min.js'
 ];
 export const styles = [
   "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css",
   "https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css",
   "https://unpkg.com/grapesjs/dist/css/grapes.min.css",
-  'https://fonts.googleapis.com/css?family=Archivo+Narrow:400,400i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&subset=latin,latin-ext'
+  'https://fonts.googleapis.com/css?family=Archivo+Narrow:400,400i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&subset=latin,latin-ext',
+  'https://fonts.googleapis.com/css?family=Montserrat',
+  "https://fonts.googleapis.com/css2?family=Pirata+One&display=swap",
 ];
-
-
-
-/*
-
-
-'https://allfont.ru/allfont.css?fonts=bodoni-cyrillic',
-  "https://fonts.googleapis.com/css2?family=Quintessential&display=swap"*/

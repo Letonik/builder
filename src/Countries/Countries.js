@@ -10,6 +10,7 @@ import flag_UK from '../assets/uk.png'
 import flag_EU from '../assets/eu.png'
 import flag_DE from '../assets/de.png'
 import check from '../assets/check.png'
+import '../api_utils/fonts/fonts.css'
 
 
 const Countries = () => {
@@ -77,6 +78,9 @@ const Countries = () => {
           </div>
         )
       }
+{/*
+      <h3 style={{fontFamily: 'Futura PT'}}> Futura PT </h3>
+      <h3 style={{fontFamily: 'Bodoni Cyrillic'}}> Bodoni Cyrillic </h3>*/}
     </div>
   );
 };
