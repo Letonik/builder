@@ -78,6 +78,34 @@ const geditorConfig = (assets, pageId) => {
       whiteButton: {},
 /*      animateButton: {}*/
     },
+    baseCss: `
+    * {
+      box-sizing: border-box;
+    }
+    html, body, [data-gjs-type=wrapper] {
+      min-height: 100%;
+    }
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      overflow-x: hidden;
+    }
+    [data-gjs-type=wrapper] {
+      overflow: auto;
+      overflow-x: hidden;
+    }
+    * ::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.1)
+    }
+    * ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.2)
+    }
+    * ::-webkit-scrollbar {
+      width: 10px
+    }
+  `,
   });
 
   addEditorCommand(editor);
