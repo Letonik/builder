@@ -9,7 +9,7 @@ import style from './Templates.module.scss'
 const Templates = () => {
   const [name, setName] = useState("");
   const [isValid, setIsValid] = useState(true);
-  const [active, setActive] = useState('61fbf3209b74a7b05b7791a3')
+  const [active, setActive] = useState('6202596f163103196f36a04e')
   const dispatch = useDispatch();
   const {pageStore} = useSelector((state) => state);
   const {pages} = pageStore;
