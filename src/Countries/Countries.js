@@ -10,7 +10,6 @@ import flag_UK from '../assets/uk.png'
 import flag_EU from '../assets/eu.png'
 import flag_DE from '../assets/de.png'
 import check from '../assets/check.png'
-import '../api_utils/fonts/fonts.css'
 
 
 const Countries = () => {
@@ -63,7 +62,6 @@ const Countries = () => {
 
   return (
     <div className={style.countries}>
-
       <h2>Сhoose a location</h2>
       {
         countries.map((item, id) =>
@@ -78,9 +76,6 @@ const Countries = () => {
           </div>
         )
       }
-{/*
-      <h3 style={{fontFamily: 'Futura PT'}}> Futura PT </h3>
-      <h3 style={{fontFamily: 'Bodoni Cyrillic'}}> Bodoni Cyrillic </h3>*/}
     </div>
   );
 };

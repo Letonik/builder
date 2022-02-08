@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Futura PT';
+  src: url('./fonts/FuturaPT/FuturaPT-Bold.woff2') format('woff2'),
+  url('./fonts/FuturaPT/FuturaPT-Bold.woff') format('woff'),
+  url('./fonts/FuturaPT/FuturaPT-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src: url('./fonts/FuturaPT/FuturaPT-Heavy.eot');
+  src: url('./fonts/FuturaPT/FuturaPT-Heavy.eot?#iefix')
+  format('embedded-opentype'),
+  url('./fonts/FuturaPT/FuturaPT-Heavy.woff2') format('woff2'),
+  url('./fonts/FuturaPT/FuturaPT-Heavy.woff') format('woff'),
+  url('./fonts/FuturaPT/FuturaPT-Heavy.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src: url('./fonts/FuturaPT/FuturaPT-Medium.eot');
+  src: url('./fonts/FuturaPT/FuturaPT-Medium.eot?#iefix')
+  format('embedded-opentype'),
+  url('./fonts/FuturaPT/FuturaPT-Medium.woff2') format('woff2'),
+  url('./fonts/FuturaPT/FuturaPT-Medium.woff') format('woff'),
+  url('./fonts/FuturaPT/FuturaPT-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src: url('./fonts/FuturaPT/FuturaPT-Book.eot');
+  src: url('./fonts/FuturaPT/FuturaPT-Book.eot?#iefix')
+  format('embedded-opentype'),
+  url('./fonts/FuturaPT/FuturaPT-Book.woff2') format('woff2'),
+  url('./fonts/FuturaPT/FuturaPT-Book.woff') format('woff'),
+  url('./fonts/FuturaPT/FuturaPT-Book.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src: url('./fonts/FuturaPT/FuturaPT-Light.eot');
+  src: url('./fonts/FuturaPT/FuturaPT-Light.eot?#iefix')
+  format('embedded-opentype'),
+  url('./fonts/FuturaPT/FuturaPT-Light.woff2') format('woff2'),
+  url('./fonts/FuturaPT/FuturaPT-Light.woff') format('woff'),
+  url('./fonts/FuturaPT/FuturaPT-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bodoni Cyrillic';
+  src: url('./fonts/Bodoni/Bodoni-Cyrillic.ttf');
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('./fonts/Bodoni/Bodoni-Cyrillic.woff') format('woff'),
+  url('./fonts/Bodoni/Bodoni-Cyrillic.ttf') format('truetype');
+}

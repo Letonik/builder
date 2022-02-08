@@ -86,7 +86,19 @@ export const styleManager = {
         "text-shadow",
       ],
       properties: [
-        { name: "Font", property: "font-family", defaults: "Futura PT", },
+        {
+          name: "Font",
+          property: "font-family",
+          defaults: "Arial",
+        /*  list: [
+            { name: 'Arial', value: 'Arial, Helvetica, sans-serif' },
+            { value: 'Roboto, Arial, sans-serif', name: 'Roboto' },
+            { value: 'Bodoni Cyrillic', name: 'Bodoni Cyrillic' },
+            { value: 'Montserrat', name: 'Montserrat' },
+            { value: 'Futura PT', name: 'Futura PT' },
+            { value: 'Pirata One', name: 'Pirata One' },
+          ]*/
+        },
         { name: "Weight", property: "font-weight" },
         { name: "Font color", property: "color" },
         {
@@ -599,4 +611,5 @@ export const styles = [
   'https://fonts.googleapis.com/css?family=Archivo+Narrow:400,400i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&subset=latin,latin-ext',
   'https://fonts.googleapis.com/css?family=Montserrat',
   "https://fonts.googleapis.com/css2?family=Pirata+One&display=swap",
+  'https://app3.lichishop.com/upload/fonts/fonts.css'
 ];

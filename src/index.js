@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'grapesjs/dist/css/grapes.min.css'
+import './styles/fonts/fonts.css'
 import "bootstrap";
 import 'font-awesome/css/font-awesome.min.css';
 import App from './App';

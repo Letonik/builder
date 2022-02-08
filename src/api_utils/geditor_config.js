@@ -134,7 +134,7 @@ const geditorConfig = (assets, pageId) => {
   const prop = editor.StyleManager.getProperty('typography', 'font-family');
   prop.set('options', [
     { value: 'Roboto, Arial, sans-serif', name: 'Roboto' },
-    { value: 'Bodoni Cyrillic', name: 'Bodoni Cyrillic' },
+    { value: 'Bodoni Cyrillic, sans-serif', name: 'Bodoni Cyrillic' },
     { value: 'Montserrat', name: 'Montserrat' },
     { value: 'Futura PT', name: 'Futura PT' },
     { value: 'Pirata One', name: 'Pirata One' },
