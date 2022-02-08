@@ -4,6 +4,7 @@ import grapesjsPluginExport from "grapesjs-plugin-export";
 import grapesjsStyleBg from "grapesjs-style-bg";
 import grapesjsComponentCountdown from 'grapesjs-component-countdown'
 import grapesjsSwiperSlider from 'grapesjs-swiper-slider'
+import grapesjsTyped from 'grapesjs-typed'
 import {
   addEditorCommand,
   deviceManager,
@@ -65,6 +66,7 @@ const geditorConfig = (assets, pageId) => {
       grapesjsSwiperSlider,
       blackButton,
       whiteButton,
+      grapesjsTyped
       /*animateButton*/
     ],
     pluginsOpts: {
@@ -76,6 +78,7 @@ const geditorConfig = (assets, pageId) => {
       grapesjsSwiperSlider: {},
       blackButton: {},
       whiteButton: {},
+      grapesjsTyped:{}
 /*      animateButton: {}*/
     },
     baseCss: `

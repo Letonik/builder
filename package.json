@@ -17,6 +17,7 @@
     "grapesjs-react": "^4.0.1-alpha",
     "grapesjs-style-bg": "^1.0.5",
     "grapesjs-swiper-slider": "0.0.5",
+    "grapesjs-typed": "^1.0.5",
     "jquery": "^3.6.0",
     "react": "^17.0.2",
     "react-bootstrap": "^2.1.1",
